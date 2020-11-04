@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>组件使用</title>
+    <meta name="generator" content="VuePress 1.5.3">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.c6d2e4d1.css" as="style"><link rel="preload" href="/assets/js/app.db6b8348.js" as="script"><link rel="preload" href="/assets/js/2.868d2cb9.js" as="script"><link rel="preload" href="/assets/js/10.7f3538bd.js" as="script"><link rel="prefetch" href="/assets/js/11.298d8855.js"><link rel="prefetch" href="/assets/js/12.3c58ab34.js"><link rel="prefetch" href="/assets/js/13.602dc9e8.js"><link rel="prefetch" href="/assets/js/14.8f03b228.js"><link rel="prefetch" href="/assets/js/15.7acb1b8b.js"><link rel="prefetch" href="/assets/js/16.78180dae.js"><link rel="prefetch" href="/assets/js/3.6cc0999e.js"><link rel="prefetch" href="/assets/js/4.be2e2647.js"><link rel="prefetch" href="/assets/js/5.688b8714.js"><link rel="prefetch" href="/assets/js/6.c89b3dc4.js"><link rel="prefetch" href="/assets/js/7.9888632d.js"><link rel="prefetch" href="/assets/js/8.97d36bbb.js"><link rel="prefetch" href="/assets/js/9.f9981ec3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c6d2e4d1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/React/" class="nav-link router-link-active">
+  React
+</a></div><div class="nav-item"><a href="/company/" class="nav-link">
+  公司内部前端学习
+</a></div><div class="nav-item"><a href="/home/" class="nav-link">
+  搭建个人博客
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/React/" class="nav-link router-link-active">
+  React
+</a></div><div class="nav-item"><a href="/company/" class="nav-link">
+  公司内部前端学习
+</a></div><div class="nav-item"><a href="/home/" class="nav-link">
+  搭建个人博客
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/React/" aria-current="page" class="sidebar-link">获取地址组件地址</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>React 公共组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/React/publicComponent/content-box.html" class="sidebar-link"> 容器组件</a></li><li><a href="/React/publicComponent/echarts.html" class="sidebar-link">echarts 组件</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>React 业务组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/React/reactComponent/form.html" aria-current="page" class="active sidebar-link">包装form</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/React/reactComponent/user.html" class="sidebar-link">选人控件</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="组件使用"><a href="#组件使用" class="header-anchor">#</a> 组件使用</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+ <span class="token keyword">const</span> <span class="token function-variable function">formSubmit</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">values</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;formSubmit -&gt; values&quot;</span><span class="token punctuation">,</span> values<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token operator">&lt;</span>DForm submit<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">formSubmit</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+      options<span class="token operator">=</span><span class="token punctuation">{</span>
+        <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+              labelCol<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+              wrapperCol<span class="token operator">:</span> <span class="token number">14</span><span class="token punctuation">,</span>
+              colSpan<span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+              label<span class="token operator">:</span> <span class="token string">'船号'</span><span class="token punctuation">,</span>
+              data<span class="token operator">:</span> shipNoList<span class="token punctuation">,</span>
+              formItemType<span class="token operator">:</span> <span class="token string">'select'</span><span class="token punctuation">,</span>
+              placeholder<span class="token operator">:</span> <span class="token string">'请选择船号'</span><span class="token punctuation">,</span>
+              required<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+              key<span class="token operator">:</span> <span class="token string">'shipNo'</span><span class="token punctuation">,</span>
+              disabled<span class="token operator">:</span> props<span class="token punctuation">[</span><span class="token string">'disabled'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+              value<span class="token operator">:</span> formData<span class="token punctuation">[</span><span class="token string">'shipNo'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+              callback<span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token function">onChange</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token function">setFormData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> shipNo<span class="token operator">:</span> value <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                  <span class="token function">queryMeasureInfoShipByShipId</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+              <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            labelCol<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+              wrapperCol<span class="token operator">:</span> <span class="token number">14</span><span class="token punctuation">,</span>
+              colSpan<span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+              required<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+              label<span class="token operator">:</span> <span class="token string">'供应商'</span><span class="token punctuation">,</span>
+              formItemType<span class="token operator">:</span> <span class="token string">'input'</span><span class="token punctuation">,</span>
+              key<span class="token operator">:</span> <span class="token string">'supplierName'</span><span class="token punctuation">,</span>
+              disabled<span class="token operator">:</span> props<span class="token punctuation">[</span><span class="token string">'disabled'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+              placeholder<span class="token operator">:</span> <span class="token string">'请输入供应商'</span><span class="token punctuation">,</span>
+              value<span class="token operator">:</span> formData<span class="token punctuation">[</span><span class="token string">'supplierName'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+              callback<span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token function">onChange</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token function">setFormData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token operator">...</span>formData<span class="token punctuation">,</span> <span class="token operator">...</span><span class="token punctuation">{</span> supplierName<span class="token operator">:</span> value <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+              <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+              labelCol<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+              wrapperCol<span class="token operator">:</span> <span class="token number">14</span><span class="token punctuation">,</span>
+              colSpan<span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+              label<span class="token operator">:</span> <span class="token string">'采样日期'</span><span class="token punctuation">,</span>
+              formItemType<span class="token operator">:</span> <span class="token string">'datePicker'</span><span class="token punctuation">,</span>
+              placeholder<span class="token operator">:</span> <span class="token string">'请选择采样日期'</span><span class="token punctuation">,</span>
+              required<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+              key<span class="token operator">:</span> <span class="token string">'simplingData'</span><span class="token punctuation">,</span>
+              disabled<span class="token operator">:</span> props<span class="token punctuation">[</span><span class="token string">'disabled'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+              value<span class="token operator">:</span> formData<span class="token punctuation">[</span><span class="token string">'simplingData'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+              disabledDate<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token string">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">'2'</span><span class="token punctuation">,</span> <span class="token string">&quot;startDisabledDate&quot;</span><span class="token operator">:</span> <span class="token function">moment</span><span class="token punctuation">(</span>formData<span class="token punctuation">.</span>inTime<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">subtract</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'days'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;endDisabledDate&quot;</span><span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              callback<span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token function">onChange</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token function">setFormData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token operator">...</span>formData<span class="token punctuation">,</span> <span class="token operator">...</span><span class="token punctuation">{</span> simplingData<span class="token operator">:</span> value <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+              <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+              labelCol<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+              wrapperCol<span class="token operator">:</span> <span class="token number">14</span><span class="token punctuation">,</span>
+              colSpan<span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+              label<span class="token operator">:</span> <span class="token string">'采样重量(kg)'</span><span class="token punctuation">,</span>
+              formItemType<span class="token operator">:</span> <span class="token string">'inputNumber'</span><span class="token punctuation">,</span>
+              placeholder<span class="token operator">:</span> <span class="token string">'请输入重量'</span><span class="token punctuation">,</span>
+              required<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+              key<span class="token operator">:</span> <span class="token string">'simplingWeight'</span><span class="token punctuation">,</span>
+              min<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+              max<span class="token operator">:</span> <span class="token number">10000</span><span class="token punctuation">,</span>
+              value<span class="token operator">:</span> formData<span class="token punctuation">[</span><span class="token string">'simplingWeight'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+              callback<span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token function">onChange</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token function">setFormData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token operator">...</span>formData<span class="token punctuation">,</span> <span class="token operator">...</span><span class="token punctuation">{</span> simplingWeight<span class="token operator">:</span> value <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+              <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+              labelCol<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+              wrapperCol<span class="token operator">:</span> <span class="token number">14</span><span class="token punctuation">,</span>
+              colSpan<span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+              label<span class="token operator">:</span> <span class="token string">'采样人'</span><span class="token punctuation">,</span>
+              formItemType<span class="token operator">:</span> <span class="token string">'user'</span><span class="token punctuation">,</span>
+              placeholder<span class="token operator">:</span> <span class="token string">'请选择采样人'</span><span class="token punctuation">,</span>
+              required<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+              key<span class="token operator">:</span> <span class="token string">'samplingPerson'</span><span class="token punctuation">,</span>
+              value<span class="token operator">:</span> formData<span class="token punctuation">[</span><span class="token string">'samplingPerson'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+              callback<span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token function">onSubmit</span><span class="token punctuation">(</span><span class="token parameter">values</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token keyword">if</span> <span class="token punctuation">(</span>values<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">let</span> userStr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token keyword">as</span> any
+                    values<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">key</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                      userStr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>key<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                    <span class="token function">setFormData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token operator">...</span>formData<span class="token punctuation">,</span> <span class="token operator">...</span><span class="token punctuation">{</span> samplingPerson<span class="token operator">:</span> userStr<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">','</span><span class="token punctuation">)</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
+                    <span class="token punctuation">)</span>
+                  <span class="token punctuation">}</span>
+
+                <span class="token punctuation">}</span>
+              <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+           <span class="token punctuation">{</span>
+              colSpan<span class="token operator">:</span> <span class="token number">24</span><span class="token punctuation">,</span>
+              labelCol<span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+              wrapperCol<span class="token operator">:</span> <span class="token number">19</span><span class="token punctuation">,</span>
+              label<span class="token operator">:</span> <span class="token string">'附件'</span><span class="token punctuation">,</span>
+              formItemType<span class="token operator">:</span> <span class="token string">'upload'</span><span class="token punctuation">,</span>
+              url<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/web/fileupload/upload.form?bizType=ShipEnter/ShipMeasureManager/Deduct&amp;bizId=null&amp;uploadType=1&amp;lastModified=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token function">moment</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'YYYY-MM-DD'</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&amp;subPath=ShipEnter</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+              accept<span class="token operator">:</span> <span class="token string">'.doc,.docx,.xls,.xlsx,.pdf,.rtf,.png,.jpg'</span><span class="token punctuation">,</span>
+              listType<span class="token operator">:</span> <span class="token string">&quot;picture-card&quot;</span><span class="token punctuation">,</span>
+              maxFileList<span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+              required<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+              uploadText<span class="token operator">:</span> <span class="token string">'附件上传'</span><span class="token punctuation">,</span>
+              value<span class="token operator">:</span> formData<span class="token punctuation">[</span><span class="token string">'waterFile'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+              defaultFileList<span class="token operator">:</span> <span class="token function">defaultFileList</span><span class="token punctuation">(</span>props<span class="token punctuation">.</span>formData<span class="token punctuation">,</span> <span class="token string">'waterFile'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              key<span class="token operator">:</span> <span class="token string">'waterFile'</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span><span class="token operator">/</span>DForm<span class="token operator">&gt;</span>
+
+</code></pre></div><table><thead><tr><th>参数</th> <th>说明</th> <th>类型</th> <th></th></tr></thead> <tbody><tr><td>options</td> <td>传入配置</td> <td>Array[]</td> <td></td></tr> <tr><td></td> <td>colSpan</td> <td>栅格比例</td> <td>Number</td></tr> <tr><td></td> <td>labelCol</td> <td>设置 label 宽度</td> <td>Number</td></tr> <tr><td></td> <td>wrapperCol</td> <td>设置 输入框宽度</td> <td>Number</td></tr> <tr><td></td> <td>label</td> <td>显示名称</td> <td>string</td></tr> <tr><td></td> <td>formItemType</td> <td>配置显示的数据目前支持 input,inputNumber,select,datePicker,rangePicker,textArea,<br>text,button,upload,dict,checkbox,user <br>使用 user 类型 components 组件库里必须要有</td> <td>string</td></tr> <tr><td></td> <td>required</td> <td>是否验证</td> <td>Boolean</td></tr> <tr><td></td> <td>placeholder</td> <td>默认显示值</td> <td>string</td></tr> <tr><td></td> <td>value</td> <td>设置值</td> <td>string</td></tr> <tr><td></td> <td>callbak</td> <td>回调对象</td> <td>Object</td></tr> <tr><td></td> <td>key</td> <td>对应后台字段</td> <td>string</td></tr> <tr><td></td> <td>disabled</td> <td>禁用属性</td> <td>Boolean</td></tr> <tr><td></td> <td>data</td> <td>formItemType == select 传入下拉数据</td> <td>Array[{name:'',value}]</td></tr> <tr><td></td> <td>disabledDate</td> <td>ormItemType == datePicker 禁用选择指定日期</td> <td>Object:{type:0 丨,1 丨,2, startDisabledDate:moment, endDisabledDate:moment} <br> 0 小于某个时间段 只需要传 endDisabledDate <br> 1 大于于某个时间段 只需要传 startDisabledDate <br> 2 大于某时间段并且小于某时间段 startDisabledDate &amp; endDisabledDate 都需传</td></tr> <tr><td></td> <td>url</td> <td>formItemType == upload</td> <td>上传后台地址</td></tr> <tr><td></td> <td>accept</td> <td>formItemType == upload 配置指定上传文件类型</td> <td>stirng '.doc,.docx,.xls,.xlsx,.pdf,.rtf,.png,.jpg'</td></tr> <tr><td></td> <td>listType</td> <td>formItemType == upload 配置显示方法 同 antd 官网 上传组件</td> <td>址</td></tr> <tr><td></td> <td>maxFileList</td> <td>formItemType == upload 配置最大上传数量</td> <td>Number 址</td></tr> <tr><td></td> <td>defaultFileList</td> <td>formItemType == upload 配置默认回显</td> <td>址</td></tr></tbody></table></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/React/publicComponent/echarts.html" class="prev">
+        echarts 组件
+      </a></span> <span class="next"><a href="/React/reactComponent/user.html">
+        选人控件
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.db6b8348.js" defer></script><script src="/assets/js/2.868d2cb9.js" defer></script><script src="/assets/js/10.7f3538bd.js" defer></script>
+  </body>
+</html>
